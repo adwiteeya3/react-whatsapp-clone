@@ -32,7 +32,7 @@ function Sidebar() {
             </div>
 
             <div className='sidebar_chats'>
-                
+                <h1>Sidebar Option</h1>
             </div>
         </div>
     );
