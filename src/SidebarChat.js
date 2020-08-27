@@ -9,7 +9,14 @@ function SidebarChat({ addNewChat }) {
         setSeed(Math.floor(Math.random() * 5000));
     }, []);
 
-    return (
+    const createChat= () => {
+        const roomName = prompt("please enter name for chat");
+        if (roomName) {
+            //pass
+        }
+    };
+
+    return !addNewChat ? (
         <div className='sidebarChat'>
             <Avatar src={`https://avatars.dicebear.com/api/female/${seed}.svg`} />
             <div className='sidebarChat_info'>
@@ -17,7 +24,11 @@ function SidebarChat({ addNewChat }) {
                 <p>Last message...</p>
             </div>
         </div>
-    )
+    ): (
+        <div onClick={createChat} className='sidebarChat'>
+            <h2>Add new Chat</h2>
+        </div>
+    );
 }
 
 export default SidebarChat
