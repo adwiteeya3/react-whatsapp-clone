@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './Chat.css';
-import { Avatar } from '@material-ui/core';
+import { Avatar, IconButton } from '@material-ui/core';
+import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 
 function Chat() {
     const [seed, setSeed] = useState("");
@@ -19,6 +23,17 @@ function Chat() {
                     <p>Last seen at..</p>
                 </div>
 
+                <div className='chat_headerRight'>
+                    <IconButton >
+                        <SearchOutlinedIcon/>
+                    </IconButton>
+                    <IconButton >
+                        <AttachFileIcon />
+                    </IconButton>
+                    <IconButton >
+                        <MoreVertIcon />
+                    </IconButton>
+                </div>
             </div>
 
             <div className='chat_body'>
