@@ -23,6 +23,7 @@
 
 .chat_headerInfo > p {
     color: gray;
+    font-size: small;
 }
 
 .chat_headerRight {
@@ -55,4 +56,28 @@
     top: -15px;
     font-weight: 800;
     font-size: xx-small;
+}
+
+.chat_timestamp {
+    margin-left: 10px;
+    font-size: xx-small;
+}
+
+.chat_reciever {
+    margin-left: auto;
+    background-color: #dcf8c6;
+}
+
+.chat_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    height: 62px;
+}
+
+.chat_footer > form {
+    flex: 1;
+    display: flex;
+    background-color: blue;
 }
