@@ -9,6 +9,7 @@ function App() {
         {/* Sidebar */}
         <Sidebar />
         {/* Chat */}
+        <Chat />
       </div>
     </div>
   );
