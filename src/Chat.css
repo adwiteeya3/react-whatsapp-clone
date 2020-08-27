@@ -88,6 +88,10 @@
     border: none;
 }
 
+.chat_footer > form > input:focus {
+    outline: none;
+}
+
 .chat_footer > form > button {
     display: none;
 }
