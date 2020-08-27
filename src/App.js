@@ -9,8 +9,9 @@ function App() {
     <div className="app">
       <div className='app_body'>
         <Router>
+          <Sidebar />
           <Switch>
-            <Sidebar />
+
             <Route path='/rooms/:roomId'>
               <Chat />
             </Route>
