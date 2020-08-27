@@ -7,10 +7,14 @@ function App() {
   return (
     <div className="app">
       <div className='app_body'>
-        {/* Sidebar */}
-        <Sidebar />
-        {/* Chat */}
-        <Chat />
+        <Router>
+        <Switch>
+          
+          <Sidebar />   {/* Sidebar */}
+          <Chat />      {/* Chat */}
+          
+        </Switch>
+        </Router >
       </div>
     </div>
   );
