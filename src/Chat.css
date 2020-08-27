@@ -40,3 +40,19 @@
     overflow: hidden;
 }
 
+.chat_message {
+    position: relative;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+.chat_name{
+    position: absolute;
+    top: -15px;
+    font-weight: 800;
+    font-size: xx-small;
+}
