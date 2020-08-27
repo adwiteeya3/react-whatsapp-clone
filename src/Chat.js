@@ -48,7 +48,7 @@ function Chat() {
             message: input,
             name: user.displayName,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-        })
+        });
         SetInput('');
     };
 
@@ -59,7 +59,10 @@ function Chat() {
 
                 <div className='chat_headerInfo'>
                     <h3>{roomName}</h3>
-                    <p>Last seen at..</p>
+                    <p> last seen{" "}
+                        {new Date(
+                        messages[messages.length - 1]?.timestamp?.toDate()).toUTCString()}
+                    </p>
                 </div>
 
                 <div className='chat_headerRight'>
@@ -76,8 +79,8 @@ function Chat() {
             </div>
 
             <div className='chat_body'>
-                {messages.map(message => (
-                    <p className={`chat_message ${true && 'chat_reciever'}`}>
+                {messages.map((message) => (
+                    <p className={`chat_message ${message.name ===user.displayName && 'chat_reciever'}`}>
                         <span className='chat_name'> {message.name} </span>
                             {message.message}
                         <span className='chat_timestamp'> 
