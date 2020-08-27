@@ -81,3 +81,8 @@
     display: flex;
     background-color: blue;
 }
+
+.chat_footer > form > input {
+    flex: 1;
+    border-radius: 30px;
+}
